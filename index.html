@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOANZ</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form id="form" class="relative">
+      <!-- //start ADs  -->
+      <div
+        data-target="adContainer"
+        class="ads fixed h-full w-full z-10 hidden"
+      >
+        <div
+          class="bg-[url('./assets/img/fancybox_overlay.png')] bg-cover h-full w-full bg-no-repeat bg-blend-color"
+        >
+          <div class="relative w-full h-full">
+            <div
+              data-target="adLoader"
+              class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 hidden"
+            >
+              <div
+                class="bg-gray-900 w-11 h-11 rounded-md flex justify-center items-center p-1"
+              >
+                <div
+                  class="bg-[url('./assets/img/fancybox_loading@2x.gif')] w-3/4 h-3/4 bg-no-repeat bg-center bg-contain"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="ads absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 h-[95%] w-[95%] items-center justify-center flex"
+            >
+              <div
+                data-target="adData"
+                class="relative bg-white w-full h-auto sm:h-72 lg:h-64 max-w-5xl shadow-lg shadow-neutral-800 rounded-md hidden"
+              >
+                <div
+                  class="flex flex-col justify-center items-center gap-y-6 px-10 pt-4 pb-6 mt-10 sm:mt-0"
+                >
+                  <h3 class="font-bold text-2xl text-center mt-2">
+                    Ad Disclosure
+                  </h3>
+                  <p class="text-sm">
+                    Application and services offered by Loanz.com are governed
+                    by the Loanz USA Inc. General Terms of Service and
+                    additional terms and conditions or written agreements
+                    applicable to specific products and services presented
+                    during the application or ordering process. Loanz.com
+                    privacy practices are explained in the Loanz USA Inc.
+                    Privacy Policy.
+                  </p>
+                  <p class="text-sm">
+                    Our lending partners offer a range of possible combinations
+                    of credit terms to qualified applicants. Loan fees and
+                    interest rates are determined solely by the lender or
+                    lending partner based on the lender's or lending partner's
+                    internal policies, underwriting criteria, and applicable
+                    law.
+                  </p>
+                </div>
+
+                <button
+                  data-target="closeAd"
+                  class="outline-none border-none bg-gray-950 absolute rounded-full flex justify-center items-center w-8 h-8 p-2 right-3 top-4 shadow-lll hover:scale-105 duration-300"
+                >
+                  <span
+                    ><img src="./assets/icons/close-x.svg " class=""
+                  /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //End ADs  -->
+      <div class="">
+        <header>
+          <!-- start nav  -->
+          <nav class="h-20 flex justify-center items-center shadow">
+            <div
+              class="container lg:w-contanerlg flex justify-between items-center px-3"
+            >
+              <div class="logo">
+                <div class="logoContainer w-36 sm:w-44 duration-300">
+                  <img src="./assets/icons/logo.svg" alt="logo" />
+                </div>
+              </div>
+              <div data-target="adBtn">
+                <div class="cursor-pointer">
+                  <span class="text-gray-400 text-sm italic cursor-pointer"
+                    >Ad Disclosure</span
+                  >
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- end nav  -->
+          <!-- start Ads  -->
+
+          <!-- end Ads  -->
+
+          <!-- start progress  -->
+          <section
+            class="progress flex justify-center items-center py-9 sm:py-4 md:py-8"
+          >
+            <div
+              class="container lg:w-contanerlg flex justify-center items-center gap-4 px-3"
+            >
+              <div class="">
+                <button
+                  data-previous
+                  class="rounded-lg sm:rounded-3xl w-20 h-10 bg-gray-100 flex items-center justify-center text-gray-600 border border-1 border-gray-200 hover:bg-gray-200 hover:text-gray-500 transition-all ease-in-out duration-300 text-sm sm:text-base"
+                >
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-4 h-4 pt-1"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+                      ></path></svg
+                  ></span>
+                  <span>Back</span>
+                </button>
+              </div>
+
+              <div
+                class="relative bg-gray-200 w-5/6 h-1 md:h-3 rounded-3xl flex items-center"
+              >
+                <div
+                  data-progress
+                  class="bg-blue-500 h-full rounded-xl rounded-r-none"
+                ></div>
+                <div
+                  data-progress-tracker
+                  class="absolute h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-blue-500 -translate-x-3"
+                ></div>
+              </div>
+            </div>
+          </section>
+          <!-- end progress  -->
+        </header>
+
+        <main
+          class="bg-gradient-to-b from-white to-blue-100 pb-16 flex justify-center items-center md:pt-3 lg:min-h-screen"
+        >
+          <div class="container lg:w-contanerxl text-center overflow-hidden">
+            <!-- step1  -->
+            <div
+              id="step1"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col flex"
+            >
+              <div class="stepConatiner">
+                <h2
+                  class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                >
+                  How much would you like to borrow?
+                </h2>
+                <div class="progreesContainer pt-10 flex flex-col gap-y-5">
+                  <div class="progreess flex gap-y-7 flex-col pb-5">
+                    <div
+                      class="text-blue-500 text-4xl lg:text-5xl font-semibold"
+                    >
+                      $<span id="rangeValue" class="">100</span>
+                    </div>
+                    <div
+                      class="w-4/5 sm:w-1/2 mx-auto relative before:content-['$100'] before:absolute before:top-6 before:text-blue-500 after:content-['$10K+'] after:absolute after:top-6 after:text-blue-500 after:-right-3"
+                    >
+                      <input
+                        type="range"
+                        value="100"
+                        min="100"
+                        max="10000"
+                        step="50"
+                        class="range outline-none w-full"
+                      />
+                    </div>
+                    <div class="text-sm text-gray-500">
+                      ($100 min to $10,000+)
+                    </div>
+                  </div>
+                  <div class="text-lg text-gray-700">
+                    Or select one of the following common loan amounts
+                  </div>
+                  <div
+                    data-show="rangeBtn"
+                    class="grid grid-cols-2 lg:grid-cols-5 gap-2"
+                  >
+                    <button
+                      class="rounded-xs border-blue-200 shadow-sm scale-95 hover:scale-100 hover:bg-blue-500 hover:text-white duration-200 hidden"
+                    ></button>
+                  </div>
+                  <div class="w-4/5 sm:w-80 mx-auto pt-6">
+                    <button
+                      data-next
+                      class="flex items-center justify-center bg-blue-500 py-4 px-4 rounded-full w-full text-white text-2xl md:text-3xl font-bold"
+                    >
+                      Next
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 ml-1 md:w-8 md:h-8 pt-1"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- step2  -->
+            <div
+              id="step2"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col hidden"
+            >
+              <div class="stepConatiner flex flex-col gap-y-8">
+                <div class="textss">
+                  <h2
+                    class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                  >
+                    What is your name?
+                  </h2>
+                  <p
+                    class="mt-4 md:mt-6 text-gray-600 text-center font-normal text-md md:text-lg leading-6 md:leading-6 sm:px-20"
+                  >
+                    Your name is essential for lenders and their partners to
+                    tailor loan offers and improve your approval odds. This info
+                    may also be used for marketing related to loans, debt
+                    relief, and credit services.
+                  </p>
+                </div>
+                <div class="w-3/4 sm:w-96 mx-auto flex flex-col gap-y-8">
+                  <div class="f-name flex flex-col items-start">
+                    <label
+                      for="firstName"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >First Name</label
+                    >
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type=" text"
+                      class="w-full p-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty"
+                    />
+                    <div
+                      error="error"
+                      class="text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+                  <div class="f-name flex flex-col items-start">
+                    <label
+                      for="lastName"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >Last Name</label
+                    >
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      class="w-full p-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty"
+                    />
+                    <div
+                      error="error"
+                      class="error text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+                </div>
+                <div class="w-4/5 sm:w-80 mx-auto pt-6">
+                  <button
+                    data-next
+                    class="flex items-center justify-center bg-blue-500 py-4 px-4 rounded-full w-full text-white text-2xl md:text-3xl font-bold"
+                  >
+                    Next
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 ml-1 md:w-8 md:h-8 pt-1"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- step3 -->
+            <div
+              id="step3"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col hidden"
+            >
+              <div class="stepConatiner flex flex-col gap-y-8">
+                <div class="textss">
+                  <h2
+                    class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                  >
+                    What is your contact information?
+                  </h2>
+                  <p
+                    class="mt-4 md:mt-6 text-gray-600 text-center font-normal text-md md:text-lg leading-6 md:leading-6 sm:px-20"
+                  >
+                    Lending partners may reach out to you to confirm your loan
+                    request. You may also receive offers for other
+                    credit-related services.
+                  </p>
+                </div>
+                <div class="w-3/4 sm:w-96 mx-auto flex flex-col gap-y-6">
+                  <div class="flex flex-col items-start">
+                    <label
+                      for="emailAddress"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >Email Address</label
+                    >
+                    <input
+                      id="emailAddress"
+                      name="emailAddress"
+                      type="text"
+                      class="w-full p-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty"
+                    />
+                    <div
+                      id="error"
+                      class="text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+                  <div class="flex flex-col items-start">
+                    <label
+                      for="phoneNumber"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >Phone Number</label
+                    >
+                    <input
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      type="text"
+                      class="w-full p-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty"
+                    />
+                    <div
+                      id="error"
+                      class="error text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+                  <div
+                    class="flex flex-row items-start text-justify text-sm -mt-2"
+                  >
+                    <div class="mr-3 flex flex-col justify-center items-center">
+                      <input
+                        id="checkBox"
+                        name="checkBox"
+                        type="checkbox"
+                        class="rounded border-gray-300 text-blue-500 w-7 h-7"
+                      />
+                      <div id="errorChek" class="text-rose-500 hidden pt-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="text-gray-700 text-md">
+                      <p>
+                        By checking this box I agree to the
+                        <strong>Terms of Use </strong>and
+                        <strong>Privacy Policies</strong>. By checking this box
+                        I consent to receive text messages and calls via an
+                        automatic telephone dialing system and an artificial or
+                        prerecorded voice to the phone number I entered above
+                        from Loanz.com as well as from debt relief solution
+                        companies, loan providers, debt consolidation service
+                        providers and partners, including but not limited to
+                        <strong>MyMoney LLC, Redstone Capital</strong> for
+                        related products or service offers even if I am on a
+                        national, state, or entity-specific Do-Not-Call list. I
+                        understand that consent is not required to receive a
+                        quotation or make a purchase. Message and data rates may
+                        apply. For more information, please review our
+                        <strong>TCPA Disclosure.</strong>
+                      </p>
+                      <div
+                        id="errorChekMessage"
+                        class="error text-rose-500 text-xs pt-2 transition ease-in-out duration-300 hidden"
+                      >
+                        You must agree to the terms and conditions above to
+                        continue.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-4/5 sm:w-80 mx-auto pt-6">
+                  <button
+                    data-next
+                    class="flex items-center justify-center bg-blue-500 py-4 px-4 rounded-full w-full text-white text-2xl md:text-3xl font-bold"
+                  >
+                    Next
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 ml-1 md:w-8 md:h-8 pt-1"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- step4 -->
+            <div
+              id="step4"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col hidden"
+            >
+              <div class="stepConatiner flex flex-col gap-y-8">
+                <div class="textss">
+                  <h2
+                    class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                  >
+                    What is your address?
+                  </h2>
+                </div>
+                <div class="w-3/4 sm:w-96 mx-auto flex flex-col gap-y-6">
+                  <div class="flex flex-col items-start">
+                    <label
+                      for="streetAddress"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >Street Address</label
+                    >
+                    <input
+                      id="streetAddress"
+                      name="streetAddress"
+                      type="text"
+                      class="w-full p-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty"
+                    />
+                    <div
+                      data-error="address"
+                      class="text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+
+                  <div class="flex flex-col items-start">
+                    <label
+                      for="city"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >City</label
+                    >
+                    <input
+                      id="city"
+                      name="city"
+                      type="text"
+                      class="w-full p-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty"
+                    />
+                    <div
+                      data-error="address"
+                      class="text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+                  <div class="flex flex-col items-start">
+                    <label
+                      for="state"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >State</label
+                    >
+                    <select
+                      id="state"
+                      name="state"
+                      type="text"
+                      class="w-full p-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty"
+                    ></select>
+                  </div>
+                  <div class="flex flex-col items-start">
+                    <label
+                      for="zip"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >Zip</label
+                    >
+                    <input
+                      id="zip"
+                      name="zip"
+                      type="text"
+                      class="w-full p-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty"
+                    />
+                    <div
+                      data-error="address"
+                      class="text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+                </div>
+                <div class="w-4/5 sm:w-96 mx-auto pt-6">
+                  <button
+                    data-next
+                    class="flex items-center justify-center bg-blue-500 py-4 px-4 rounded-full w-full text-white text-2xl md:text-3xl font-bold"
+                  >
+                    Next
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 ml-1 md:w-8 md:h-8 pt-1"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="w-4/5 sm:w-96 mx-auto pt-6">
+                  <div
+                    class="border border-1 border-blue-200 p-3 pr-4 rounded-xl shadow-xs mt-2"
+                  >
+                    <p
+                      class="text-xs flex items-center justify-center text-blue-500"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 mr-1.5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                        ></path>
+                      </svg>
+                      This information will help lenders verify your identity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- step5 -->
+            <div
+              id="step5"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col hidden"
+            >
+              <div class="stepConatiner flex flex-col gap-y-8">
+                <div class="textss">
+                  <h2
+                    class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                  >
+                    What's your date of birth?
+                  </h2>
+                </div>
+
+                <div
+                  class="w-3/4 sm:w-[26rem] mx-auto flex flex-col gap-y-6 pt-6"
+                >
+                  <div class="flex flex-col items-start">
+                    <div
+                      class="w-full relative border border-1 border-gray-400 rounded-md flex flew-row items-center justify-center pl-4 pr-10 py-0.5 text-gray-400 bg-white text-xl"
+                    >
+                      <button
+                        id="btn_month"
+                        type="button"
+                        class="dob-date-text grow-0 p-2 font-bold text-2xl text-blue-500"
+                      >
+                        MM
+                      </button>
+                      <div>/</div>
+                      <button
+                        id="btn_day"
+                        type="button"
+                        class="dob-date-text grow-0 p-2 font-bold text-2xl text-gray-700"
+                      >
+                        DD
+                      </button>
+                      <div>/</div>
+                      <button
+                        id="btn_year"
+                        type="button"
+                        class="dob-date-text grow-0 p-2 font-bold text-2xl text-gray-700"
+                      >
+                        YYYY
+                      </button>
+                      <button
+                        id="btn_reset"
+                        type="button"
+                        class="absolute p-2 right-2 top-1/2 -translate-y-1/2 hover:text-blue-500"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="monthsContainer grid grid-cols-3 gap-3 pt-5 w-full"
+                    ></div>
+                    <div
+                      class="daysContainer grid-cols-3 sm:grid-cols-5 gap-3 pt-5 w-full hidden"
+                    ></div>
+                    <div
+                      class="yearsContainer pt-5 w-full justify-center items-center grid-cols-1 hidden"
+                    >
+                      <div
+                        id="firstYears"
+                        class="grid grid-cols-3 sm:grid-cols-5 gap-3 w-full"
+                      ></div>
+                      <button
+                        type="button"
+                        id="years_options"
+                        class="py-1 mt-3 text-lg font-semibold px-3 flex items-center mx-auto text-gray-700 hover:text-blue-500 transition ease-in-out duration-300"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-4 h-4 mr-1"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                          ></path>
+                        </svg>
+                        More Options
+                      </button>
+                      <div
+                        id="secondYears"
+                        class="grid-cols-3 sm:grid-cols-5 gap-3 w-full hidden pt-3"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-4/5 sm:w-96 mx-auto pt-6">
+                  <button
+                    data-next
+                    disabled="disabled"
+                    class="opacity-30 flex items-center justify-center bg-blue-500 py-4 px-4 rounded-full w-full text-white text-2xl md:text-3xl font-bold"
+                  >
+                    Next
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 ml-1 md:w-8 md:h-8 pt-1"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- step6 -->
+            <div
+              id="step6"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col hidden"
+            >
+              <div class="stepConatiner flex flex-col gap-y-8">
+                <div class="textss">
+                  <h2
+                    class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                  >
+                    How long have you lived at your current address?
+                  </h2>
+                </div>
+
+                <div
+                  data-show
+                  class="w-3/4 sm:w-[26rem] mx-auto flex flex-col gap-y-6 pt-6"
+                ></div>
+              </div>
+            </div>
+            <!-- step7 -->
+
+            <div
+              id="step7"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col hidden"
+            >
+              <div class="stepConatiner flex flex-col gap-y-8">
+                <div class="textss">
+                  <h2
+                    class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                  >
+                    How long have you lived at your current address?
+                  </h2>
+                </div>
+
+                <div
+                  data-show
+                  class="w-3/4 sm:w-[26rem] mx-auto flex flex-col gap-y-6 pt-6"
+                ></div>
+              </div>
+            </div>
+            <!-- step8 -->
+            <div
+              id="step8"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col hidden"
+            >
+              <div class="stepConatiner flex flex-col gap-y-8">
+                <div class="textss">
+                  <h2
+                    class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                  >
+                    Do you own or rent a home?
+                  </h2>
+                </div>
+
+                <div
+                  data-show
+                  class="w-3/4 sm:w-[26rem] mx-auto grid grid-cols-2 gap-6 pt-6"
+                ></div>
+              </div>
+            </div>
+            <!-- step9 -->
+            <div
+              id="step9"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col hidden"
+            >
+              <div class="stepConatiner flex flex-col gap-y-8">
+                <div class="textss">
+                  <h2
+                    class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                  >
+                    What Are Your Monthly Payments?
+                  </h2>
+
+                  <p
+                    class="mt-4 md:mt-6 text-gray-600 text-center font-normal text-md md:text-lg leading-6 md:leading-6 sm:px-20"
+                  >
+                    Make sure to only enter the part you pay for rent or
+                    mortgage
+                  </p>
+                </div>
+                <div class="w-3/4 sm:w-96 mx-auto flex flex-col gap-y-6">
+                  <div class="flex flex-col items-start">
+                    <label
+                      for="monthlyPayment"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >Monthly Payment</label
+                    >
+                    <div class="w-full relative">
+                      <div
+                        class="absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-1/2 flex justify-center items-center h-full pl-2"
+                      >
+                        <span class="text-2xl">$</span>
+                      </div>
+
+                      <input
+                        id="monthlyPayment"
+                        name="monthlyPayment"
+                        type="text"
+                        class="w-full py-4 pl-10 pr-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty text-2xl"
+                      />
+                    </div>
+
+                    <div
+                      id="error"
+                      class="text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+                </div>
+                <div class="w-4/5 sm:w-80 mx-auto pt-6">
+                  <button
+                    data-next
+                    class="flex items-center justify-center bg-blue-500 py-4 px-4 rounded-full w-full text-white text-2xl md:text-3xl font-bold"
+                  >
+                    Next
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 ml-1 md:w-8 md:h-8 pt-1"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- step10 -->
+            <div
+              id="step10"
+              data-step
+              class="page px-5 md:px-14 lg:w-3/4 lg:mx-auto flex-col hidden"
+            >
+              <div class="stepConatiner flex flex-col gap-y-8">
+                <div class="textss">
+                  <h2
+                    class="text-gray-900 text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center transition ease-in-out duration-300"
+                  >
+                    Monthly gross income.
+                  </h2>
+
+                  <p
+                    class="mt-4 md:mt-6 text-gray-600 text-center font-normal text-md md:text-lg leading-6 md:leading-6"
+                  >
+                    Your total <strong>monthly</strong> income (please, include
+                    all sources) before taxes
+                  </p>
+                </div>
+                <div class="w-3/4 sm:w-96 mx-auto flex flex-col gap-y-6">
+                  <div class="flex flex-col items-start">
+                    <label
+                      for="personalIncome"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >Personal Monthly Pre-tax Income</label
+                    >
+                    <div class="w-full relative">
+                      <div
+                        class="absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-1/2 flex justify-center items-center h-full pl-2"
+                      >
+                        <span class="text-2xl">$</span>
+                      </div>
+
+                      <input
+                        id="personalIncome"
+                        name="personalIncome"
+                        type="text"
+                        class="w-full py-4 pl-10 pr-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty text-2xl"
+                      />
+                    </div>
+
+                    <div
+                      id="error"
+                      class="text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+                  <!-- // -->
+                  <div id="errorContainer" class="flex flex-col items-start">
+                    <label
+                      for="householdIncome"
+                      class="block pl-0.5 text-sm font-medium text-gray-900"
+                      >Household Monthly Pre-tax Income</label
+                    >
+                    <div class="w-full relative">
+                      <div
+                        class="absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-1/2 flex justify-center items-center h-full pl-2"
+                      >
+                        <span class="text-2xl">$</span>
+                      </div>
+
+                      <input
+                        id="householdIncome"
+                        name="householdIncome"
+                        type="text"
+                        class="w-full py-4 pl-10 pr-4 border border-gray-400 rounded-md shadow-sm mt-1 outline-none placeholder-shown:not-empty text-2xl"
+                      />
+                    </div>
+
+                    <div
+                      id="error"
+                      class="text-rose-500 text-xs transition ease-in-out duration-300"
+                    ></div>
+                  </div>
+                </div>
+                <div class="w-4/5 sm:w-80 mx-auto pt-6">
+                  <button
+                    data-next
+                    class="flex items-center justify-center bg-blue-500 py-4 px-4 rounded-full w-full text-white text-2xl md:text-3xl font-bold"
+                  >
+                    Next
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 ml-1 md:w-8 md:h-8 pt-1"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <div
+                  class="border border-1 border-blue-200 p-3 pr-4 rounded-xl mt-2 w-3/4 sm:w-96 mx-auto"
+                >
+                  <p
+                    class="shadow-xs md:text-sm flex items-center justify-center text-blue-500"
+                  >
+                    Total available income indlucdes wages, retirement,
+                    investments and rental properties. If you are self-employed,
+                    include any salary, draws, or wages you receive from such
+                    activity. If you include any non-taxable income or benefits,
+                    increase those amounts by 25%. Alimony, child support or
+                    separate maintenance income is optional.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              id="step11"
+              data-step
+              class="px-5 md:px-14 lg:w-3/4 lg:mx-auto h-40 justify-center items-center tracking-wider text-6xl hidden"
+            >
+              <p class="font-medium text-gray-900">Thanks</p>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <div
+        class="bg-pink-100 border-rose-300 animate-slide-prev py-2 hover:border-blue-500 shadow-blue-500/30 hidden"
+      ></div>
+      <div
+        class="bg-white border-gray-400 animate-slide-next shadow-blue-500/0 shadow-md hidden"
+      ></div>
+      <div class="border-blue-400 hover:shadow-blue-500/30 h-16 hidden"></div>
+      <div
+        class="border-blue-300 hover:border-blue-300 leading-4 w-auto pt-1.5 grow hidden"
+      ></div>
+      <!-- start fotter  -->
+      <footer
+        class="bg-blue-500 border-t border-blue-600 flex justify-center p-8"
+      >
+        <div
+          class="text-sm text-center text-blue-100 container lg:w-contanerxl"
+        >
+          <p>
+            Application and services offered by Loanz.com are governed by the
+            Loanz USA Inc. General Terms of Service and additional terms and
+            conditions or written agreements applicable to specific products and
+            services presented during the application or ordering process.
+            Loanz.com privacy practices are explained in the Loanz USA Inc.
+            Privacy Policy.
+          </p>
+          <p class="mt-4">
+            Our lending partners offer a range of possible combinations of
+            credit terms to qualified applicants. Loan fees and interest rates
+            are determined solely by the lender or lending partner based on the
+            lender's or lending partner's internal policies, underwriting
+            criteria, and applicable law. Consumers should review-the credit
+            terms made available by the Lender before signing the loan
+            agreement.
+          </p>
+          <p class="mt-4">
+            Copyright © 2023 Copyright notice: this website and its content are
+            copyrighted by Loanz.com and all rights therein are reserved.
+            Copyrights are asserted to each aspect of the site, in whole and in
+            part, including and not limited to the text, images, composition,
+            and funnel to guide visitors through screening questions. No portion
+            of this website may be reproduced in any form or by any means
+            without the prior written consent of Loanz USA Inc.
+          </p>
+          <p class="mt-4">
+            <a href="#" class="text-white">Privacy Policy</a> |
+            <a href="#" class="text-white">Terms of Use</a> |
+            <a href="#" class="text-white"
+              >Do Not Sell or Share My Personal Information</a
+            >
+          </p>
+        </div>
+      </footer>
+      <!-- end fotter  -->
+    </form>
+    <script src="./main.js"></script>
+  </body>
+</html>
